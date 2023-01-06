@@ -4,7 +4,7 @@ class Bank
 {
   dynamic userName = 'shyam';
   dynamic Password = 5723;
-  double balance = 1000;
+  double? balance = 1000;
 
 void  showAcconutDetails()
 {
@@ -19,7 +19,7 @@ void depositeamount()
   print("\n ENTER DEPOSTE AMOUNT --->> ");
   amt = int.parse(stdin.readLineSync()!);
 
-    balance = balance  +  amt;
+    balance = balance!  +  amt;
 }
 
 void withdrawamount()
@@ -28,17 +28,17 @@ void withdrawamount()
   print("\n ENTER WITHDRAW AMOUNT --->> ");
   amt = int.parse(stdin.readLineSync()!);
 
-    if( balance <= 1000)
+    if( balance! <= 1000)
     {
       print("------YOUR TRANSACTION LIMIT EXCEED------");
     }
-    else if(balance - amt <= 1000)
+    else if(balance! - amt <= 1000)
     {
        print("------YOUR TRANSACTION LIMIT EXCEED------");
     }
     else
     {
-      balance = balance - amt;
+      balance = balance! - amt;
     }
 }
 
@@ -116,7 +116,7 @@ void main()
   }
   else
   {
-      print("---INVALID USERNAME AND PASSWORD---");
+      print("---ENTER CORRECT PASSWORD---");
   }
     
 }
