@@ -1,9 +1,8 @@
-
 int vowels()
 {
-  String str ='shyam';
+  String str ='shyam guna';
   var string = str[0];
-  dynamic vow = 0;
+  dynamic vowels = 0;
 
   for(var i = 0; i < str.length ;i++)
   {
@@ -20,10 +19,10 @@ int vowels()
        {
       string = str[i];
       print("vowels latters  -->>${string}");
-      vow++;
+      vowels++;
       }
   }
-  print("TOTAL NUMBER OF VOWELS = ${vow}");
+  print("TOTAL  vowels = ${vowels}");
   return 1;
 }
 

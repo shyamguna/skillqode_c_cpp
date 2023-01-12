@@ -3,7 +3,7 @@ import 'dart:io';
 void main()
 {
   dynamic number,rem,rev;
-  print("enter a number:");
+  print("ENTER A NUMBER:");
   number=int.parse(stdin.readLineSync()!);
   rev=0;
   while(number!=0)
@@ -13,5 +13,6 @@ void main()
     number=number~/10;
   }
 
-  print("reverse number : $rev");
+  print("REVERSE NUMBER : $rev");
 }
+

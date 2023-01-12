@@ -19,10 +19,10 @@ void main()
   num = int.parse(stdin.readLineSync()!);
   if (isPrime(num))
   {
-    print('$num : PRIME NUMBER.');
+    print('$num : Prime Number.');
   }
   else
   {
-    print('$num : NOT PRIME NUMBER.');
+    print('$num : Not Prime Number.');
   }
 }

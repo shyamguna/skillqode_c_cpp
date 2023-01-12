@@ -1,25 +1,14 @@
-void nonRepeat()
-{
-    //Initializing variables.
-    String str = "prepinsta";
-    var i;
-    dynamic freq[256] = {0};
-    //Calculating frequency of each character.
-    for(i = 0; str[i] != '\0'; i++)
-    {
-        freq[str[i]]++;
+ combinations(arr) {
+    var result = [];
+    for (int i = 0; i < arr.length; i++) {
+        for (int j = 0; j < arr.length; j++) {
+          if (i != j) {
+            result.add([arr[i], arr[j]]);
+          }
+        }
     }
- print("The non repeating characters are: ");
-  for(i = 0; i < 256; i++)
-  {
-    if(freq[i] == 1)//Finding uniques charcters and printing them.
-     {
-      print(" non repeated letter :${i}");
-     }
-  }
-   
- }
- void main()
- {
-   nonRepeat();
- }
+    return result;
+}
+void main(){
+print(combinations([1,2,3,4]));
+}   

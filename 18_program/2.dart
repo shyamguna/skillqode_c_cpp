@@ -17,12 +17,12 @@ int palindrom()
 
   if (str == reverseword) 
   {
-    print("it's palindrome");
+    print("Palindrome Number :");
     return 1;
   } 
   else 
   {
-    print("it's not palindrome");
+    print("Not Palindrome Number :");
     return 0;
   }
 }

@@ -1,33 +1,17 @@
-import 'dart:io';
-
 void main() 
 {
-  dynamic str = '';
-
-  print("ENTER A STRING : ");
-  str = stdin.readLineSync()!;
-
-  for (var i = 0; str[i] != '\0'; i++) 
+  String toUppercase(String n) 
   {
-    if (i == 0) 
+    final List<String> Str = n.split(' ');
+    for (var i = 0; i < Str.length; i++) 
     {
-      if ((str[i] == 'a' && str[i] == 'z')) str[i] = str[i] - 32;
+      Str[i] = '${Str[i][0].toUpperCase()}${Str[i].substring(1)}';
     }
-    if (str[i] == '') 
-    {
-      ++i;
-      if ((str[i] == 'a' && str[i] == 'z')) 
-      {
-        str[i] = str[i] + 32;
-      }
-    } 
-    else 
-    {
-      if ((str[i] == 'A' && str[i] == 'Z')) 
-      {
-        str[i] = str[i] - 32;
-      }
-    }
+    final output = Str.join(' ');
+    return output;
   }
-  print("CAPITALIZE STRING IS : $str");
+
+  var str1 = 'the quick brown fox';
+  print("print string  -->>$str1");
+  print(toUppercase(str1));
 }
